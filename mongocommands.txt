@@ -1,0 +1,8 @@
+db.countrieslist.find().sort({name: -1}).pretty()
+db.countrieslist.find({name:/A/}).pretty()
+db.countrieslist.find({name:/.*Z.*/}).pretty()
+db.countrieslist.findOne({name:'Italy'})
+db.countrieslist.find()
+
+
+mongoimport -d countries -c countrieslist < /Users/stephenrichardson/dropbox/projects/Node7-MongoShell/countries.json --jsonArray
